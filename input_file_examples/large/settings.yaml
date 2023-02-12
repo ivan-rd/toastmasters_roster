@@ -1,0 +1,32 @@
+---
+
+# maximum_length determines how many meetings
+# in the past from the club roster will be considered
+# when creating a new roster.
+
+maximum_length: 25
+
+# In the second pass of roster_processing.py,
+# this parameter sets a limit on the number
+# of iterations to avoid an endless loop.
+
+second_pass_iterations: 20
+
+# This is necessary to clear the thresholds
+# defined in role_spacing.xlsx in case
+# the current club roster is empty.
+
+distance_threshold_init: 4
+
+# When DEBUG is set to True, random choices are removed
+# from roster_processing.py, which means that every run
+# will be produce the same outcome. This is useful for
+# tracing and analysing problems in the code.
+
+DEBUG: True
+
+# When LOG is set to True, all role assignments during
+# the exectution of roster_processing.py are recorded
+# in assign_detail.txt/-
+
+LOG: True
