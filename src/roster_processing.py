@@ -315,7 +315,7 @@ def main():
      roles_assigned, unassigned_meetings] = create_tables(meeting_availability,role_availability, distance_threshold_init, 
                                                           input_roster_length, roster_trimmed, data_weights_table)
 
-    new_roster_init_data = np.empty((roster_trimmed.index.size,meeting_availability.columns.size),dtype=np.str)
+    new_roster_init_data = np.empty((roster_trimmed.index.size,meeting_availability.columns.size),dtype=str)
     new_roster = pd.DataFrame(data = new_roster_init_data,index = roster_trimmed.index, columns = meeting_availability.columns)   
 
     for meeting_date in new_roster.columns:
